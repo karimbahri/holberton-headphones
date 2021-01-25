@@ -1,0 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+.header {
+    background-image: url('../images/headphones_hero_1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.header_container, ul, li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0%;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+li {
+    width: 20vh;
+    padding-left: 5vh;
+}
