@@ -14,18 +14,31 @@ html {
 .header_container, ul, li {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     padding: 10px 0%;
 }
 a {
     text-decoration: none;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-    
+}
+.header_container a:hover {
+    color: #FF6565;
 }
 li {
     width: 20vh;
     padding-left: 5vh;
+}
+label {
+    display: none;
+    margin: 0 40px 0 0;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 70px;
+    cursor: pointer;
+}
+#toggle {
+    display: none;
 }
 .main_header {
     height: inherit;
@@ -46,6 +59,11 @@ li {
     font-size: 17px;
     font-weight: bold;
     color: #ffffff;
+    text-align: center;
+}
+.main_header .paragraph {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
 }
 .main_header .btn {
     font-size: 14px;
@@ -56,6 +74,9 @@ li {
     border-radius: 20px;
     background-color: #FF6565;
     margin-top: 50px;
+}
+.main_header .btn:hover {
+    background-color: #fa5c5c;
 }
 .main_header .paragraph {
     margin-top: 50px;
@@ -77,6 +98,7 @@ li {
     margin-top: 30px;
     font-family:Geneva, Tahoma, sans-serif;
     color: #071629;
+    text-align: center;
 }
 .main_icons_container {
     display: flex;
@@ -89,6 +111,7 @@ li {
 .main_icons_container .items_container {
     padding: 7vh;
 }
+
 .second_section {
     background-image: url("../images/headphones_hero_2.jpg");
     height: 40rem;
@@ -110,6 +133,7 @@ li {
 }
 .second_section_header_container p {
     margin-top: 50px;
+    text-align: center;
 }
 .second_section .icons{
     display: flex;
