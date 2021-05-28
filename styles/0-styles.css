@@ -7,7 +7,7 @@ html {
 }
 .header {
     background-image: url('../images/headphones_hero_1.jpg');
-    height: 100vh;
+    height: 120vh;
     background-size: cover;
     background-position: center;
 }
@@ -36,6 +36,7 @@ label {
     font-weight: bold;
     line-height: 70px;
     cursor: pointer;
+    color: white;
 }
 #toggle {
     display: none;
@@ -54,6 +55,7 @@ label {
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #ffffff;
+    text-align: center;
 }
 .main_header p {
     font-size: 17px;
@@ -64,6 +66,7 @@ label {
 .main_header .paragraph {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: normal;
+    text-align: center;
 }
 .main_header .btn {
     font-size: 14px;
@@ -93,6 +96,7 @@ label {
     color: #071629;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 20px;
+    text-align: center;
 }
 .main_first_section_container p {
     margin-top: 30px;
@@ -107,11 +111,11 @@ label {
     padding: 10px 40vh;
     font-family:Geneva, Tahoma, sans-serif;
     color: #071629;
+    text-align: center;
 }
 .main_icons_container .items_container {
     padding: 7vh;
 }
-
 .second_section {
     background-image: url("../images/headphones_hero_2.jpg");
     height: 40rem;
@@ -123,9 +127,10 @@ label {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 150px 300px;
+    padding: 150px 150px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
 .second_section_header_container h2 {
     font-weight: normal;
@@ -170,6 +175,9 @@ label {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #071629;
 }
+.form .heading {
+    text-align: center;
+}
 .form .input_area {
     margin-top: 50px;
 }
@@ -203,4 +211,82 @@ footer {
     justify-items: flex-start;
     justify-content: space-around;
     padding-top: 100px;
+}
+@media (max-width:942px) {
+    .main_header {
+        height: 100vh;
+        padding: 0 50px;
+    }
+    label {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+    }
+    .header_container {
+        align-items: center;
+    }
+    .header_container , ul, li {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    li {
+        display: none;
+    }
+    #toggle:checked + .header_container > ul > li {
+        display: flex;
+    }
+    .header {
+        height: 150vh;
+    }
+    .main_first_section_container {
+        padding: 0 50px;
+    }
+    .main_icons_container {
+        display: grid;
+        grid-template-columns: 300px 300px;
+    }
+    .second_section_header_container {
+        padding: 10px 10px;
+    }
+    /**/
+    .second_section {
+        height: 50rem;
+    }
+    .second_section .icons {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        padding: 100px 50px;
+        position: relative;
+        left: 20px;
+    }
+    .second_section .icons .item {
+        margin: 50px 50px;
+    }
+    /**/
+    .form {
+        padding: 100px;
+    }
+}
+@media (max-width:610px) {
+    .main_icons_container {
+        display: grid;
+        grid-template-columns: 400px;
+    }
+    .second_section {
+        height: 70rem;
+    }
+    .second_section .icons {
+        display: grid;
+        grid-template-columns: 400px;
+        margin: 50px 50px;
+        position: relative;
+        left: 100px;
+    }
+    .second_section .icons .item {
+        margin: 20px 30px;
+    }
 }
