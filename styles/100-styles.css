@@ -7,25 +7,39 @@ html {
 }
 .header {
     background-image: url('../images/headphones_hero_1.jpg');
-    height: 100vh;
+    height: 120vh;
     background-size: cover;
     background-position: center;
 }
 .header_container, ul, li {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     padding: 10px 0%;
 }
 a {
     text-decoration: none;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-    
+}
+.header_container a:hover {
+    color: #FF6565;
 }
 li {
     width: 20vh;
     padding-left: 5vh;
+}
+label {
+    display: none;
+    margin: 0 40px 0 0;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 70px;
+    cursor: pointer;
+    color: white;
+}
+#toggle {
+    display: none;
 }
 .main_header {
     height: inherit;
@@ -41,11 +55,18 @@ li {
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #ffffff;
+    text-align: center;
 }
 .main_header p {
     font-size: 17px;
     font-weight: bold;
     color: #ffffff;
+    text-align: center;
+}
+.main_header .paragraph {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: center;
 }
 .main_header .btn {
     font-size: 14px;
@@ -56,6 +77,9 @@ li {
     border-radius: 20px;
     background-color: #FF6565;
     margin-top: 50px;
+}
+.main_header .btn:hover {
+    background-color: #fa5c5c;
 }
 .main_header .paragraph {
     margin-top: 50px;
@@ -72,11 +96,13 @@ li {
     color: #071629;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 20px;
+    text-align: center;
 }
 .main_first_section_container p {
     margin-top: 30px;
     font-family:Geneva, Tahoma, sans-serif;
     color: #071629;
+    text-align: center;
 }
 .main_icons_container {
     display: flex;
@@ -85,6 +111,7 @@ li {
     padding: 10px 40vh;
     font-family:Geneva, Tahoma, sans-serif;
     color: #071629;
+    text-align: center;
 }
 .main_icons_container .items_container {
     padding: 7vh;
@@ -100,9 +127,10 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 150px 300px;
+    padding: 150px 150px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
 .second_section_header_container h2 {
     font-weight: normal;
@@ -110,6 +138,7 @@ li {
 }
 .second_section_header_container p {
     margin-top: 50px;
+    text-align: center;
 }
 .second_section .icons{
     display: flex;
@@ -117,22 +146,49 @@ li {
     align-items: flex-start;
 }
 .second_section .icons .item {
-    background-image: url(../images/pentagone.png);
-    background-size: cover;
+    /*background-image: url(../images/pentagone.png);*/
+    background-color: transparent;
+    /*background-size: cover;*/
     background-position: center;
     height: 25vh;
-    width: 27vh;
+    width: 29vh;
     color: white;
+}
+.second_section .icons .item {
+    height: 0;
+    border-top: 80px solid #FF6565;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: relative;
+}
+.second_section .icons .item::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    border-bottom: 80px solid #FF6565;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    bottom: 80px;
+    left: -30px;
+    z-index: 1;
+
 }
 .second_section .icons .item h2 {
     padding-top: 50px;
     padding-left: 50px;
     font-weight: bold;
     font-size: 35px;
+    z-index: 99;
+    position: relative;
+    bottom: 180px;
 }
 .second_section .icons .item p {
     padding-left: 23px;
     padding-top: 10px;
+    z-index: 99;
+    position: relative;
+    bottom: 180px;
 }
 .hidden {
     display: none;
@@ -145,6 +201,9 @@ li {
     padding: 100px 300px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #071629;
+}
+.form .heading {
+    text-align: center;
 }
 .form .input_area {
     margin-top: 50px;
@@ -179,4 +238,110 @@ footer {
     justify-items: flex-start;
     justify-content: space-around;
     padding-top: 100px;
+}
+@media (max-width:942px) {
+    .main_header {
+        height: 100vh;
+        padding: 0 50px;
+    }
+    label {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+    }
+    .header_container {
+        align-items: center;
+    }
+    .header_container , ul, li {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    li {
+        display: none;
+    }
+    #toggle:checked + .header_container > ul > li {
+        display: flex;
+    }
+    .header {
+        height: 150vh;
+    }
+    .main_first_section_container {
+        padding: 0 50px;
+    }
+    .main_icons_container {
+        display: grid;
+        grid-template-columns: 300px 300px;
+    }
+    .second_section_header_container {
+        padding: 10px 10px;
+    }
+    /**/
+    .second_section {
+        height: 50rem;
+    }
+    .second_section .icons {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        padding: 100px 50px;
+        position: relative;
+        left: 20px;
+    }
+    .second_section .icons .item {
+        padding-top: 200px;
+    }
+    .second_section .icons .item::before {
+        margin-bottom: 200px;
+    }
+    .second_section .icons .item h2,  .second_section .icons .item p{
+        position: relative;
+        bottom: 350px;
+    }
+    .second_section .icons .item {
+        border-top: 80px solid #FF6565;
+        border-left: 30px solid transparent;
+        border-right: 50px solid transparent;
+    }
+    .second_section .icons .item::before {
+        border-bottom: 100px solid #FF6565;
+        border-left: 116px solid transparent;
+        border-right: 120px solid transparent;
+    }
+    /**/
+    .form {
+        padding: 100px;
+    }
+
+}
+@media (max-width:610px) {
+    .main_icons_container {
+        display: grid;
+        grid-template-columns: 400px;
+    }
+    .second_section {
+        height: 70rem;
+    }
+    .second_section .icons {
+        display: grid;
+        grid-template-columns: 400px;
+        margin: 50px 50px;
+        position: relative;
+        left: 100px;
+    }
+    .second_section .icons .item {
+        margin: 20px 30px;
+    }
+    .second_section .icons .item {
+        padding-top: 80px;
+    }
+    .second_section .icons .item::before {
+        margin-bottom: 80px;
+    }
+    .second_section .icons .item h2,  .second_section .icons .item p{
+        position: relative;
+        bottom: 230px;
+    }
 }
