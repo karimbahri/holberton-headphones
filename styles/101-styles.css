@@ -1,0 +1,313 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+@keyframes bounce{
+    20%, 50%, 80%, to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-34px);
+    }
+    70%{
+        transform: translateY(-19px);
+    }
+    90%{
+        transform: translateY(-9px);
+    }
+}
+.header {
+    background-image: url('../images/headphones_hero_1.jpg');
+    height: 120vh;
+    background-size: cover;
+    background-position: center;
+}
+.header_container, ul, li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 0%;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header_container a:hover {
+    color: #FF6565;
+}
+li {
+    width: 20vh;
+    padding-left: 5vh;
+}
+label {
+    display: none;
+    margin: 0 40px 0 0;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 70px;
+    cursor: pointer;
+    color: white;
+}
+#toggle {
+    display: none;
+}
+.main_header {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center ;
+    padding: 0 300px;
+}
+
+.main_header h1 {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+.main_header p {
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+.main_header .paragraph {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+.main_header .btn {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: #FF6565 1px solid;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #FF6565;
+    margin-top: 50px;
+}
+.main_header .btn:hover {
+    background-color: #fa5c5c;
+}
+.main_header .paragraph {
+    margin-top: 50px;
+}
+.main_first_section_container{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center ;
+    padding: 0 300px;
+}
+.main_first_section_container h1 {
+    color: #071629;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+    text-align: center;
+}
+.main_first_section_container p {
+    margin-top: 30px;
+    font-family:Geneva, Tahoma, sans-serif;
+    color: #071629;
+    text-align: center;
+}
+.main_icons_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 10px 40vh;
+    font-family:Geneva, Tahoma, sans-serif;
+    color: #071629;
+    text-align: center;
+}
+.main_icons_container .items_container {
+    padding: 7vh;
+}
+.main_icons_container .items_container:hover {
+    animation: bounce 1s linear;
+}
+.second_section {
+    background-image: url("../images/headphones_hero_2.jpg");
+    height: 40rem;
+    background-size: cover;
+    background-position: center;
+}
+.second_section_header_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 150px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.second_section_header_container h2 {
+    font-weight: normal;
+    font-size: 29px;
+}
+.second_section_header_container p {
+    margin-top: 50px;
+    text-align: center;
+}
+.second_section .icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+.second_section .icons .item:hover{
+    animation: bounce 1s linear;
+}
+.second_section .icons .item {
+    background-image: url(../images/pentagone.png);
+    background-size: cover;
+    background-position: center;
+    height: 25vh;
+    width: 27vh;
+    color: white;
+}
+.second_section .icons .item h2 {
+    padding-top: 50px;
+    padding-left: 50px;
+    font-weight: bold;
+    font-size: 35px;
+}
+.second_section .icons .item p {
+    padding-left: 23px;
+    padding-top: 10px;
+}
+.hidden {
+    display: none;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 300px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #071629;
+}
+.form .heading {
+    text-align: center;
+}
+.form .input_area {
+    margin-top: 50px;
+}
+.form .input_area .input {
+    margin-bottom: 30px;
+    width: 100%;
+    color: #071629;
+}
+.form .input_area .input input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid silver;
+}
+.form .input_area .input .btn {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    background-color: #FF6565;
+    border-color: #FF6565;
+    border-radius: 50px;
+}
+footer {
+    background-color: #071629;
+    height: 40vh;
+}
+.footer_container {
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+@media (max-width:942px) {
+    .main_header {
+        height: 100vh;
+        padding: 0 50px;
+    }
+    label {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+    }
+    .header_container {
+        align-items: center;
+    }
+    .header_container , ul, li {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    li {
+        display: none;
+    }
+    #toggle:checked + .header_container > ul > li {
+        display: flex;
+    }
+    .header {
+        height: 150vh;
+    }
+    .main_first_section_container {
+        padding: 0 50px;
+    }
+    .main_icons_container {
+        display: grid;
+        grid-template-columns: 300px 300px;
+    }
+    .second_section_header_container {
+        padding: 10px 10px;
+    }
+    /**/
+    .second_section {
+        height: 50rem;
+    }
+    .second_section .icons {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        padding: 100px 50px;
+        position: relative;
+        left: 20px;
+    }
+    .second_section .icons .item {
+        margin: 50px 50px;
+    }
+    /**/
+    .form {
+        padding: 100px;
+    }
+}
+@media (max-width:610px) {
+    .main_icons_container {
+        display: grid;
+        grid-template-columns: 400px;
+    }
+    .second_section {
+        height: 70rem;
+    }
+    .second_section .icons {
+        display: grid;
+        grid-template-columns: 400px;
+        margin: 50px 50px;
+        position: relative;
+        left: 100px;
+    }
+    .second_section .icons .item {
+        margin: 20px 30px;
+    }
+}
